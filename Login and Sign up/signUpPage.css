@@ -1,0 +1,161 @@
+body {
+    background-image: url(SignupBackgroundImage.jpg);
+    height: 100%;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1s;
+}
+
+.container {
+    border: none;
+    box-shadow: 0 0 10px whitesmoke;
+    border-radius: 10px;
+    width: 25rem;
+    margin: auto;
+    margin-top: 30vh;
+    background-color: rgba(255, 255, 255, 0.774);
+    transition: ease-in-out 200ms;
+}
+
+@media (width <= 416px) {
+    .container {
+        transform: scale(0.8);
+    }
+}
+
+@media (416px <= width <= 800px) {
+    .container {
+        transform: scale(0.9);
+    }
+}
+
+@media (800px <= width <= 1400px) {
+    .container {
+        transform: scale(1);
+    }
+}
+
+@media (width >= 1400px) {
+    .container {
+        transform: scale(1.1);
+    }
+}
+
+h1 {
+    margin-left: 7.9rem;
+}
+
+h2 {
+    margin-left: 5.4rem;
+    margin-bottom: 30px;
+}
+
+span {
+    margin-left: 2.2rem;
+}
+
+h3 {
+    margin-left: 4.9rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 15px;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left: 5.3rem;
+    padding: 5px;
+    padding-left: 8px;
+    width: 220px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: rgb(255, 255, 255) solid 3px;
+    transition: ease-in-out 200ms;
+}
+
+input:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+    border: rgba(0, 0, 0, 0.247) solid 3px;
+}
+
+button {
+    margin-left: 10.5rem;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    padding-right: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(67, 117, 20);
+    color: white;
+    font-weight: bold;
+    transition: ease-in-out 200ms;
+}
+
+button:hover {
+    background-color: rgb(38, 66, 11);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: rgb(65, 116, 21);
+    transition: ease-in-out 200ms;
+}
+
+a:hover {
+    color: rgb(12, 22, 4);
+    transition: ease-in-out 200ms;
+}
+
+.fas {
+    position: absolute;
+    margin-left: 18.2rem;
+    margin-top: 0.4rem;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox + label::before {
+    content: url("HidePass.png");
+}
+
+#checkbox:checked + label::before {
+    content: url("ShowPass.png");
+}
+
+#errorMsg {
+    color: rgb(156, 0, 0);
+    position: absolute;
+    margin-left: 7.4rem;
+    margin-top: -1.7rem;
+}
+
+#error {
+    color: rgb(156, 0, 0);
+    position: absolute;
+    margin-left: 5.5rem;
+    margin-top: -1.7rem;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
