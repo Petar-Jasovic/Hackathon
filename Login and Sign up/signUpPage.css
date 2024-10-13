@@ -25,32 +25,38 @@ body {
     transition: ease-in-out 200ms;
 }
 
-@media (width <= 416px) {
+@media (width < 416px) {
     .container {
         transform: scale(0.8);
     }
 }
 
-@media (416px <= width <= 800px) {
+@media (416px < width < 800px) {
     .container {
         transform: scale(0.9);
     }
 }
 
-@media (800px <= width <= 1400px) {
+@media (800px < width < 1400px) {
     .container {
         transform: scale(1);
     }
 }
 
-@media (width >= 1400px) {
+@media (1400px < width < 3840px) {
     .container {
         transform: scale(1.1);
     }
 }
 
+@media (width > 3840px) {
+    .container {
+        transform: scale(1.2);
+    }
+}
+
 h1 {
-    margin-left: 7.9rem;
+    margin-left: 8.1rem;
 }
 
 h2 {
@@ -63,10 +69,14 @@ span {
 }
 
 h3 {
-    margin-left: 4.9rem;
+    margin-left: 4.8rem;
     margin-top: 1rem;
-    padding-bottom: 1rem;
     font-size: 15px;
+}
+
+.clickHere {
+    margin-left: 4.4rem;
+    padding-bottom: 0.8rem;
 }
 
 input {

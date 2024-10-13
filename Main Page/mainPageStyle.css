@@ -1,5 +1,4 @@
 .page {
-    /* border: 1px solid red; */
     height: 100%;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -18,8 +17,12 @@
     background-image: url(axiom-pattern.png);
 }
 .menu {
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
     margin-left: 1.2rem;
+    width: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 
@@ -41,14 +44,18 @@
     font-weight: bold; 
 }
 .searchGlass {
-    height: 2.4rem;
+    height: 2.5rem;
     padding: .5rem;
+    cursor: pointer;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
-    background-color: white;
+    background-color: rgb(231, 231, 231);
 }
 
+.searchGlassImg {
+    margin-top: 0.2rem;
+}
 
 .right {
     width: 20%;
@@ -60,13 +67,25 @@
     background-image: url(axiom-pattern.png);
 }
 .signUpButton {
+    cursor: pointer;
     margin-right: 10px;
     border: none;
     border-radius: 5px;
     font-weight: bold;
 }
-.logInButton {  
+.loginButton {  
+    cursor: pointer;
     border: none;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.profile {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.profileImg {
+    width: 2rem;
 }

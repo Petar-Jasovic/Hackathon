@@ -44,14 +44,20 @@ body {
     }
 }
 
-@media (width >= 1400px) {
+@media (1400px < width < 3840px) {
     .container {
         transform: scale(1.1);
     }
 }
 
+@media (width > 3840px) {
+    .container {
+        transform: scale(1.2);
+    }
+}
+
 h1 {
-    margin-left: 7.9rem;
+    margin-left: 8rem;
 }
 
 h2 {
@@ -59,9 +65,16 @@ h2 {
 }
 
 h3 {
-    margin-left: 5.7rem;
     margin-top: 1rem;
     font-size: 15px;
+}
+
+.loginHere {
+    margin-left: 5.7rem;
+}
+
+.clickHere {
+    margin-left: 4.1rem;
 }
 
 input {
@@ -88,7 +101,7 @@ input:hover {
 }
 
 button {
-    margin-left: 10.7rem;
+    margin-left: 11rem;
     padding: 0.6rem;
     padding-right: 0.7rem;
     margin-top: 0.2rem;
