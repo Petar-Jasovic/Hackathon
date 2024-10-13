@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (inputedEmail === localStorage.getItem("newEmail") && inputedPassword === localStorage.getItem("newPassword")) {
                 localStorage.setItem("loggedIn", true);
-                window.location.href = "main.html";
+                window.location.href = "../Main Page/main.html";
             } else {
                 errorMsg.textContent = "Invalid username or password";
                 password.style.border = "rgba(140, 5, 0, 0.5) solid 3px"
