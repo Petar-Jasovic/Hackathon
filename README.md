@@ -1,3 +1,3 @@
-# Hackathon
+# "Lokalni Hodači"
 
-I will upload all files for the Hackathon event here.
+Project for the 2024 Hackathon about tourism in Montenegro.
