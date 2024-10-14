@@ -9,20 +9,45 @@
 <body>
     <main class="page">
         <div class="navigationBar">
+
             <div class="left">
-                <button class="menu"><img src="burgerBar.png" alt="Menu" height="30rem"></button>
+                <button class="menu" onclick="hideShowMenu()"><img class="menuImg" src="burgerBar.png" alt="Menu" height="30rem"></button>
             </div>
+
             <div class="middle">
                 <input class="searchBar" type="text" placeholder="Search for...">
                 <button class="searchGlass"><img class="searchGlassImg" src="search.png" alt="search glass" height="18px"></button>
             </div>
+
             <div class="right">
                 <button class="signUpButton" id="signUpButton" onclick="location.href='../Login and Sign up/signup.html'">Sign up</button>
                 <button class="loginButton" id="loginButton" onclick="location.href='../Login and Sign up/login.html'">Log in</button>
-                <button class="profile" id="profile" onclick=""><img class="profileImg" src="profile.png"></button>
+                <button class="profile" id="profile" onclick="hideShowProfile()"><img class="profileImg" src="profile.png"></button>
             </div>
         </div>
+
+        <div class="off_screen_menu" id="menu_bar">
+            <h3 class="off_screen_menu_head">List of old towns</h3>
+                <ul class="towns">
+                    <li><a href="">Ulcinj</a></li>
+                    <li><a href="">Bar</a></li>
+                    <li><a href="">Budva</a></li>
+                    <li><a href="">Kotor</a></li>
+                    <li><a href="">Herceg Novi</a></li>
+                </ul>
+        </div>
+        
+        <div class="profile_info" id="user_info">
+            <h4 class="profile_title">Profile information</h4>
+            <p>Email: <span id="profile_username"></span></p>
+            <input class="profile_info_mail" type="text">
+            <p>Password: <span id="profile_password">*******</span></p>
+            <input class="profile_info_password" type="password">
+            <button class="sign_out_button">Sign out</button>
+        </div>
+
     </main>
+
     <script>
         if(localStorage.getItem("loggedIn") === "true"){
             document.getElementById("signUpButton").hidden = true;
@@ -33,6 +58,34 @@
             document.getElementById("loginButton").hidden = false;
             document.getElementById("profile").hidden = true;
         }
+        
+        // localStorage.getItem()
+
+        var showMenu = document.getElementById('menu_bar');
+        var showProfile = document.getElementById('user_info');
+        var displayMenu = 0;
+        var displayProfile = 0;
+
+        function hideShowMenu() {
+            if (displayMenu == 0) {
+                showMenu.classList.add('show');
+                displayMenu = 1;
+            } else {
+                showMenu.classList.remove('show');
+                displayMenu = 0;
+            }
+        }
+
+        function hideShowProfile() {
+            if (displayProfile == 0) {
+                showProfile.classList.add('show');
+                displayProfile = 1;
+            } else {
+                showProfile.classList.remove('show');
+                displayProfile = 0;
+            }
+        }
+
     </script>
 </body>
 </html>
