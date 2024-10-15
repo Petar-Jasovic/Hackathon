@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
     <link rel="stylesheet" href="mainPageStyle.css">
+    <script src="mainPageJs.js"></script>
 </head>
 <body>
     <main class="page">
@@ -43,7 +44,7 @@
             <input class="profile_info_mail" type="text">
             <p>Password: <span id="profile_password">*******</span></p>
             <input class="profile_info_password" type="password">
-            <button class="sign_out_button">Sign out</button>
+            <button class="sign_out_button" id="sign_out_button" onclick="signOut()">Sign out</button>
         </div>
 
     </main>
@@ -59,6 +60,11 @@
             document.getElementById("profile").hidden = true;
         }
         
+        function signOut(){
+            localStorage.removeItem("loggedIn");
+            window.location.href = "../Login and Sign up/login.html"
+        }
+
         // localStorage.getItem()
 
         var showMenu = document.getElementById('menu_bar');

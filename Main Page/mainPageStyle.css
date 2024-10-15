@@ -29,9 +29,9 @@
 
 .menu:hover {
     .menuImg {
-        height: 2.5rem;
-        margin-left: -0.25rem;
-        margin-top: -0.25em;
+        height: 2.2rem;
+        margin-left: -0.15rem;
+        margin-top: -0.15rem;
         transition: ease-in-out 200ms;
     }
 }

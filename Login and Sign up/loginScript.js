@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    if(localStorage.getItem("loggedIn")){
+        window.location.href = "../Main Page/main.html";
+    }
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
     const loginForm = document.getElementById("loginForm");
