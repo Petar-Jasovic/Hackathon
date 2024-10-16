@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page</title>
-    <link rel="stylesheet" href="mainPageStyle.css">
-    <script src="mainPageJs.js"></script>
+    <title>Ulcinj</title>
+    <link rel="stylesheet" href="Ulcinj_page_style.css">
 </head>
 <body>
     <main class="page">
@@ -31,7 +30,7 @@
         <div class="off_screen_menu" id="menu_bar">
             <h3 class="off_screen_menu_head">List of old towns</h3>
                 <ul class="towns">
-                    <li><a href="Ulcinj_old_town/Ulcinj_page.html">Ulcinj</a></li>
+                    <li><a href="">Ulcinj</a></li>
                     <li><a href="">Bar</a></li>
                     <li><a href="">Budva</a></li>
                     <li><a href="">Kotor</a></li>
@@ -47,14 +46,49 @@
             <input class="profile_info_password" type="password">
             <button class="sign_out_button" id="sign_out_button" onclick="signOut()">Sign out</button>
         </div>
-        
 
-        <h1 class="site_name">Welcome to Lokalni Hodaci!</h1>
-
-        <div class="aboutSite">
-            <h2>We’re excited to have you here. This site is your gateway to discovering the rich history, fascinating old towns, and hidden gems of southern Montenegro. Whether you're a history enthusiast or simply curious about exploring new places, you’ll find plenty of information here about ancient sites, local legends, and cultural landmarks. Take your time to browse through, learn something new, and get inspired for your next adventure! Join a passionate community of adventurers who share their experiences and inspire others through breathtaking photos and stories from across the globe.</h2>
+        <div class="head">
+            <h1>Welcome to the Old Town of Ulcinj</h1>
+            <h2>Discover the Ancient History, Breathtaking Views, and Unique Culture of Ulcinj's Old Town!</h2>
+            <img src="ulcinj-old-town-709022.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border: 1px solid rgb(0,0,0,0.5); border-radius: 5px;">
         </div>
-        
+
+        <div class="aboutBody">
+            <h1>About the Old Town of Ulcinj</h1>
+            <p>The Old Town of Ulcinj, perched on a hill overlooking the Adriatic Sea, is one of the oldest settlements on the Adriatic coast, with over 2,000 years of history. This fortified town has been shaped by various civilizations, from the Illyrians and Romans to the Byzantines and Ottomans, each leaving its mark on Ulcinj's rich cultural tapestry. Known for its ancient architecture, narrow stone streets, and stunning sea views, the Old Town is a must-visit destination for those seeking both adventure and history.</p>
+
+            <h1>Top Attractions</h1>
+            <ol>
+                <li>Ulcinj Castle (Ulcinj Fortress)</li>
+                <p>This iconic medieval fortress stands proudly at the highest point of the Old Town, offering panoramic views of the Adriatic Sea and the surrounding area. Once a key defensive stronghold, today it houses art galleries, museums, and restaurants.</p>
+                <ul>
+                    <li><b>Best time to visit</b> Year-round</li>
+                    <li><b>Activities</b>: Sightseeing, photography, exploring galleries</li>
+                    <li><b>Location</b> Ulcinj Old Town</li>
+                </ul>
+
+                <li>Museum of Ulcinj</li>
+                <p>Located within the ancient walls of the Old Town, the Museum of Ulcinj tells the story of the town’s rich history through artifacts from its Illyrian, Roman, and Ottoman pasts. The museum also features exhibits on the town’s connection to piracy and slavery, which once played a significant role in its economy.</p>
+                <ul>
+                    <li><b>Best time to visit</b> Open year-round</li>
+                    <li><b>Activities</b> Historical exploration</li>
+                    <li><b>Location</b> Ulcinj Old Town</li>
+                </ul>
+
+                <li>The Slave Market Square</li>
+                <p>A reminder of Ulcinj’s more turbulent past, this square was once used as a slave market during the time of Ottoman rule. Now, it's a historic landmark where visitors can reflect on the town’s complex history while taking in the medieval architecture.</p>
+                <ul>
+                    <li><b>Location</b> Center of Ulcinj Old Town</li>
+                </ul>
+            </ol>
+                <h1>Outdoor Adventures</h1>
+                <p style="padding-left: 2rem;">The Old Town of Ulcinj is surrounded by natural beauty, perfect for adventurers looking to combine history with outdoor activities. The cliffs surrounding the town offer incredible views and opportunities for exploring coastal paths, while the nearby beaches, such as Mala Plaža (Small Beach) and Velika Plaža (Long Beach), are ideal for water sports.</p>
+                <ul style="padding-left: 4.6rem;">
+                    <li><b>Popular Hiking Trails</b> Explore the ancient pathways that surround the town and lead to scenic viewpoints above the Adriatic.</li>
+                    <li><b>Water Activities</b> Head down to the nearby beaches for swimming, snorkeling, or windsurfing.</li>
+                </ul>
+        </div>
+
         <footer class="footer">
             <div class="footerLeft">
                 <h2>Contact us!</h2>
@@ -78,9 +112,6 @@
                         <li>Municipality of Herceg Novi</li>
                     </ul>
             </div>
-
-        </footer>
-
     </main>
 
     <script>
@@ -98,8 +129,6 @@
             localStorage.removeItem("loggedIn");
             window.location.href = "../Login and Sign up/login.html"
         }
-
-        // localStorage.getItem()
 
         var showMenu = document.getElementById('menu_bar');
         var showProfile = document.getElementById('user_info');
@@ -125,7 +154,6 @@
                 displayProfile = 0;
             }
         }
-
     </script>
 </body>
 </html>
