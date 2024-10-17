@@ -1,5 +1,10 @@
+body {
+    background-image: url(arabesque.png);
+    background-color: rgb(99, 141, 113);
+    position: absolute;
+}
+
 .page {
-    border: 1px solid red;
     height: 100%;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -11,29 +16,46 @@
 .navigationBar {
     height: 5rem;
     display: flex;
+    position: sticky;
+    top: 0.5rem;
 }
 
 .head {
     text-align: center;
 }
 .aboutBody {
-    border: 1px solid green;
-    padding-left: 2rem;
+    padding: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
 .footer {
     display: flex;
-    background-color: rgb(0,0,0,0.8);
     color: white;
     margin-top: 5rem;
+    margin-bottom: 0.6rem;
 }
 .footerLeft {
     width: 50%;
+    background-color: rgb(0,0,0,0.8);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-right: 0.4rem;
     text-align: center;
 }
 .footerRight {
     width: 50%;
+    background-color: rgb(0,0,0,0.8);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-left: 0.4rem;
     text-align: center;
+}
+.contact {
+    margin-left: -2.8rem;
 }
 /* left section */
 
@@ -154,14 +176,15 @@
 /* menu bar  */
 
 .off_screen_menu {
-    background-color: rgb(114, 138, 122);
+    background-color: rgba(114, 138, 122, 0.7);
     background-image: url(axiom-pattern.png);
     border: 1px solid rgb(114, 138, 122);
-    position: absolute;
+    font-size: 1.1rem;
+    position: fixed;
     margin-top: 0.6rem;
     width: 14%;
     min-width: 13rem;
-    min-height: 80vh;
+    min-height: 58.5rem;
     color: white;
 }
 
@@ -183,7 +206,7 @@ li a {
 .profile_info {
     padding: 2rem;
     display: flex;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -221,13 +244,164 @@ li a {
     margin-bottom: 3rem;
 }
 
-.sign_out_button {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0.6rem;
+.changeEmail {
+    height: 2rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
+    background-color: rgb(67, 117, 20);
+    color: white;
     font-weight: bold;
+    transition: ease-in-out 200ms;
+}
+.changePassword {
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(67, 117, 20);
+    color: white;
+    font-weight: bold;
+    transition: ease-in-out 200ms;
+}
+.changeEmail:hover {
+    background-color: rgb(38, 66, 11);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+.changePassword:hover {
+    background-color: rgb(38, 66, 11);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+.profile_info_mail {
+    margin-right: 3.5rem;
+    margin-bottom: 3rem;
+    padding-left: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: rgb(255, 255, 255) solid 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-in-out 200ms;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.profile_info_mail:hover {
+    background-color: rgb(210, 210, 210);
+    cursor: pointer;
+    border: rgba(0, 0, 0, 0.247) solid 3px;
+    transition: ease-in-out 200ms;
+}
+.profile_info_mail.show {
+    opacity: 1;
+    transition: ease-in-out 200ms;
+    visibility: visible;
+}
+.profile_info_password {
+    margin-right: 3.5rem;
+    padding-left: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: rgba(255, 255, 255, 0) solid 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.profile_info_password:hover {
+    background-color: rgb(210, 210, 210);
+    cursor: pointer;
+    border: rgba(0, 0, 0, 0.247) solid 3px;
+    transition: ease-in-out 200ms;
+}
+.profile_info_password.show {
+    opacity: 1;
+    transition: ease-in-out 200ms;
+    visibility: visible;
+}
+
+#changeEmailConfirm {
+    position: absolute;
+    padding: 0.4rem;
+    margin-left: 12rem;
+    margin-bottom: 6.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(38, 66, 11);
+    color: white;
+    transition: ease-in-out 200ms;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: ease-in-out 200ms;
+}
+#changeEmailConfirm:hover {
+    background-color: rgb(17, 31, 5);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+#changeEmailConfirm.show {
+    opacity: 1;
+    visibility: visible;
+}
+#changePasswordConfirm {
+    position: absolute;
+    padding: 0.4rem;
+    margin-top: 10.9rem;
+    margin-left: 12rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(38, 66, 11);
+    color: white;
+    transition: ease-in-out 200ms;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: ease-in-out 200ms;
+}
+#changePasswordConfirm:hover {
+    background-color: rgb(17, 31, 5);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+#changePasswordConfirm.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#emailChangeErrorMsg {
+    position: absolute;
+    margin-bottom: 4rem;
+    margin-right: 3.25rem;
+}
+#passwordChangeErrorMsg {
+    position: absolute;
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 17rem;
+}
+
+.sign_out_button {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(67, 117, 20);
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: ease-in-out 200ms;
+}
+.sign_out_button:hover {
+    background-color: rgb(38, 66, 11);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
 }
 
 #menu_bar, #user_info {
@@ -239,4 +413,30 @@ li a {
 #menu_bar.show, #user_info.show {
     opacity: 1;
     visibility: visible;
+}
+
+#checkboxEmail {
+    visibility: hidden;
+    margin-left: -0.5rem;
+}
+
+#checkboxEmail + label::before {
+    content: url("HidePass.png");
+}
+
+#checkboxEmail:checked + label::before {
+    content: url("ShowPass.png");
+}
+
+#checkboxPassword {
+    visibility: hidden;
+    margin-left: -0.5rem;
+}
+
+#checkboxPassword + label::before {
+    content: url("HidePass.png");
+}
+
+#checkboxPassword:checked + label::before {
+    content: url("ShowPass.png");
 }
