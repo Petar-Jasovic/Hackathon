@@ -35,16 +35,24 @@ body {
 }
 .footer {
     display: flex;
-    background-color: rgb(0,0,0,0.8);
     color: white;
-    margin-top: 8rem;
+    margin-top: 5rem;
+    margin-bottom: 0.6rem;
 }
 .footerLeft {
     width: 50%;
+    background-color: rgb(0,0,0,0.8);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-right: 0.4rem;
     text-align: center;
 }
 .footerRight {
     width: 50%;
+    background-color: rgb(0,0,0,0.8);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-left: 0.4rem;
     text-align: center;
 }
 
@@ -146,16 +154,39 @@ body {
 }
 .signUpButton {
     cursor: pointer;
-    margin-right: 10px;
+    margin-left: 16rem;
+    margin-top: -0.2rem;
+    text-align: center;
+    padding: 0.8rem;
+    padding-bottom: 1.8rem;
     border: none;
     border-radius: 5px;
+    background-color: rgb(67, 117, 20);
     font-weight: bold;
+    color: white;
+    transition: ease-in-out 200ms;
+}
+.signUpButton:hover {
+    background-color: rgb(38, 66, 11);
+    transition: ease-in-out 200ms;
 }
 .loginButton {  
     cursor: pointer;
     border: none;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: -0.2rem;
+    padding: 0.8rem;
+    padding-bottom: 1.8rem;
     border-radius: 5px;
+    background-color: rgb(67, 117, 20);
     font-weight: bold;
+    color: white;
+    transition: ease-in-out 200ms;
+}
+.loginButton:hover {  
+    background-color: rgb(38, 66, 11);
+    transition: ease-in-out 200ms;
 }
 
 .profile {
