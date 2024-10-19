@@ -11,18 +11,20 @@
         <div class="navigationBar">
 
             <div class="left">
-                <button class="menu" onclick="hideShowMenu()"><img class="menuImg" src="burgerBar.png" alt="Menu" height="30rem"></button>
+                <button class="menu" onclick="hideShowMenu()"><img class="menuImg" src="../burgerBar.png" alt="Menu" height="30rem"></button>
             </div>
 
             <div class="middle">
-                <input class="searchBar" type="text" placeholder="Search for...">
-                <button class="searchGlass"><img class="searchGlassImg" src="search.png" alt="search glass" height="18px"></button>
+                <div class="searchBarContainer">
+                    <input class="searchBar" type="text" placeholder="Search for...">
+                    <button class="searchGlass"><img class="searchGlassImg" src="../search.png" alt="search glass" height="18px"></button>
+                </div>
             </div>
 
             <div class="right">
                 <button class="signUpButton" id="signUpButton" onclick="location.href='../../Login and Sign up/signup.html'">Sign up</button>
                 <button class="loginButton" id="loginButton" onclick="location.href='../../Login and Sign up/login.html'">Log in</button>
-                <button class="profile" id="profile" onclick="hideShowProfile()"><img class="profileImg" src="profile.png"></button>
+                <button class="profile" id="profile" onclick="hideShowProfile()"><img class="profileImg" src="../profile.png"></button>
             </div>
         </div>
 
@@ -64,7 +66,7 @@
         <div class="head">
             <h1>Welcome to the Old Town of Ulcinj</h1>
             <h2>Discover the Ancient History, Breathtaking Views, and Unique Culture of Ulcinj's Old Town!</h2>
-            <img src="ulcinj-old-town.png" alt="Failed to load image 'Ulcinj old town'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border: 5px solid rgb(0,0,0,0.5); border-radius: 40px; margin-bottom: 5rem; margin-top: 5rem;">
+            <img src="ulcinj-old-town.png" alt="Failed to load image 'Ulcinj old town'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border: 5px solid rgb(0,0,0,0.5); border-radius: 40px; margin-bottom: 5rem; margin-top: 5rem; min-width: 20rem;">
         </div>
 
         <div class="aboutBody">
@@ -104,7 +106,7 @@
         </div>
 
         <footer class="footer">
-            <div class="footerLeft">
+            <div class="footerItem">
                 <h2>Contact us!</h2>
                 <h3 style="margin-bottom: 4rem;">We'd love to hear from you! Whether you have questions, suggestions, or just want to share your latest adventure with us, feel free to reach out.</h3>
                 <h4>Here's how you can get in touch:</h4>
@@ -114,7 +116,7 @@
                 </ul>
             </div>
 
-            <div class="footerRight">
+            <div class="footerItem">
                 <h2>Our Supporting Municipalities</h2>
                 <h3>We are honored to be sponsored by municipalities that share our vision of promoting adventure, tourism, and outdoor activities. Their support helps us showcase the natural beauty, culture, and unique experiences that each region has to offer.</h3>
                 <h4>Meet Our Municipal Partners:</h4>
