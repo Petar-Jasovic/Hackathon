@@ -15,8 +15,10 @@
             </div>
 
             <div class="middle">
-                <input class="searchBar" type="text" placeholder="Search for...">
-                <button class="searchGlass"><img class="searchGlassImg" src="../search.png" alt="search glass" height="18px"></button>
+                <div class="searchBarContainer">
+                    <input class="searchBar" type="text" placeholder="Search for...">
+                    <button class="searchGlass"><img class="searchGlassImg" src="../search.png" alt="search glass" height="18px"></button>
+                </div>
             </div>
 
             <div class="right">
@@ -44,32 +46,61 @@
         
         <div class="profile_info" id="user_info">
             <h4 class="profile_title">Profile information</h4>
-            <p>Email: <span id="profile_email">########</span>
-            <input type="checkbox" id="checkboxEmail" onclick="showEmail()">
-            <label for="checkboxEmail" class="fas" id="fas"></label>
-            <button class="changeEmail" style="margin-left: 1rem;" onclick="changeEmail()">Change?</button>
+
+            <p class="emailInfoContainer">
+                <div class="emailNameSpace">
+                    <p style="margin-top: 0px; margin-right: 5px;">Email:</p>
+                    <span id="profile_email">########</span>
+                    <input type="checkbox" id="checkboxEmail" onclick="showEmail()">
+                    <label for="checkboxEmail" class="fas" id="fas"></label>
+                </div>
+                <div class="emailChangeSpace">
+                    <button class="changeEmail" style="margin-left: 1rem;" onclick="changeEmail()">Change?</button>
+                </div>
             </p>
-            <input class="profile_info_mail" id="profile_info_mail" type="text" onkeyup="emailValidation()"><button id="changeEmailConfirm" onclick="confirmChangeEmail()">Submit</button>
-            <p id="emailChangeErrorMsg"></p>
-            <p>Password: <span id="profile_password">########</span>
-            <input type="checkbox" id="checkboxPassword" onclick="showPassword()">
-            <label for="checkboxPassword" class="fas" id="fas"></label>
-            <button class="changePassword" style="margin-left: 1rem;" onclick="changePassword()">Change?</button>
+
+            <div class="changeEmailContainer">
+                <input class="profile_info_mail" id="profile_info_mail" type="text" onkeyup="emailValidation()">
+                <button id="changeEmailConfirm" onclick="confirmChangeEmail()">Submit</button>
+                <p id="emailChangeErrorMsg"></p>
+            </div>
+
+        <!------------------------------------------------------------------------------------------------------------->
+
+            <p class="passwordInfoContainer">
+                <div class="passwordNameSpace">
+                    <p style="margin-top: 0px; margin-right: 5px;">Password:</p>
+                    <span id="profile_password">########</span>
+                    <input type="checkbox" id="checkboxPassword" onclick="showPassword()">
+                    <label for="checkboxPassword" class="fas" id="fas"></label>
+                </div>
+                <div class="passwordChangeSpace">
+                    <button class="changePassword" style="margin-left: 1rem;" onclick="changePassword()">Change?</button>
+                </div>
             </p>
-            <input class="profile_info_password" id="profile_info_password" type="text"><button id="changePasswordConfirm" onclick="confirmChangePassword()">Submit</button>
-            <p id="passwordChangeErrorMsg"></p>
+
+            <div class="changePasswordContainer">
+                <div>
+                    <input class="profile_info_password" id="profile_info_password" type="text">
+                    <button id="changePasswordConfirm" onclick="confirmChangePassword()">Submit</button>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p id="passwordChangeErrorMsg"></p>
+                </div>
+            </div>
+
             <button class="sign_out_button" id="sign_out_button" onclick="signOut()">Sign out</button>
         </div>
 
         <div class="head">
             <h1>Welcome to the Old Town of Kotor</h1>
-            <h2>Discover the Medieval Beauty, Stunning Bay Views, and Rich Cultural Heritage of Kotor’s Old Town!</h2>
-            <img src="Kotor_old_town.png" alt="Failed to load image 'Ulcinj old town'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border: 5px solid rgb(0,0,0,0.5); border-radius: 40px; margin-bottom: 5rem; margin-top: 5rem;">
+            <h2>Discover the Medieval Beauty, Stunning Bay Views, and Rich Cultural Heritage of Kotor's Old Town!</h2>
+            <img src="Kotor_old_town.png" alt="Failed to load image 'Ulcinj old town'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border: 5px solid rgb(0,0,0,0.5); border-radius: 40px; margin-bottom: 5rem; margin-top: 5rem; min-width: 20rem;">
         </div>
 
         <div class="aboutBody">
             <h1>About the Old Town of Kotor</h1>
-            <p>The Old Town of Kotor (Stari Grad Kotor) is a UNESCO World Heritage site, nestled between the mountains and the Bay of Kotor. With its origins dating back to the Roman Empire, the town is renowned for its well-preserved medieval architecture, fortified walls, and narrow, winding streets. The town’s long history and strategic location made it a significant cultural and trading center, and today, it is one of the most visited destinations in Montenegro.</p>
+            <p>The Old Town of Kotor (Stari Grad Kotor) is a UNESCO World Heritage site, nestled between the mountains and the Bay of Kotor. With its origins dating back to the Roman Empire, the town is renowned for its well-preserved medieval architecture, fortified walls, and narrow, winding streets. The town's long history and strategic location made it a significant cultural and trading center, and today, it is one of the most visited destinations in Montenegro.</p>
 
             <h1>Top Attractions</h1>
             <ol>
@@ -81,8 +112,8 @@
                     <li><b>Location</b> Above the Old Town of Kotor</li>
                 </ul>
 
-                <li>St. Tryphon’s Cathedral (Katedrala Svetog Tripuna)</li>
-                <p>Built in 1166, this Romanesque cathedral is one of the most significant historical landmarks in Montenegro. Inside, you’ll find beautiful frescoes and a treasury with religious artifacts that reflect Kotor’s deep Christian heritage.</p>
+                <li>St. Tryphon's Cathedral (Katedrala Svetog Tripuna)</li>
+                <p>Built in 1166, this Romanesque cathedral is one of the most significant historical landmarks in Montenegro. Inside, you'll find beautiful frescoes and a treasury with religious artifacts that reflect Kotor's deep Christian heritage.</p>
                 <ul>
                     <li><b>Best time to visit</b> Open year-round</li>
                     <li><b>Activities</b> Sightseeing, photography</li>
@@ -97,7 +128,7 @@
                 </ul>
             </ol>
                 <h1>Outdoor Adventures</h1>
-                <p style="padding-left: 2rem;">Kotor’s location between the mountains and the sea offers a wealth of outdoor activities for adventure enthusiasts.</p>
+                <p style="padding-left: 2rem;">Kotor's location between the mountains and the sea offers a wealth of outdoor activities for adventure enthusiasts.</p>
                 <ul style="padding-left: 4.6rem;">
                     <li><b>Hiking the Ladder of Kotor:</b> This historic trail offers a challenging yet rewarding hike through the mountains, with spectacular views of the Bay of Kotor and the surrounding landscape.</li>
                     <li><b>Boat Tours:</b> Explore the Bay of Kotor by boat, including visits to nearby attractions like Our Lady of the Rocks and the Blue Cave, offering a mix of nature and history.</li>
@@ -105,7 +136,7 @@
         </div>
 
         <footer class="footer">
-            <div class="footerLeft">
+            <div class="footerItem">
                 <h2>Contact us!</h2>
                 <h3 style="margin-bottom: 4rem;">We'd love to hear from you! Whether you have questions, suggestions, or just want to share your latest adventure with us, feel free to reach out.</h3>
                 <h4>Here's how you can get in touch:</h4>
@@ -115,7 +146,7 @@
                 </ul>
             </div>
 
-            <div class="footerRight">
+            <div class="footerItem">
                 <h2>Our Supporting Municipalities</h2>
                 <h3>We are honored to be sponsored by municipalities that share our vision of promoting adventure, tourism, and outdoor activities. Their support helps us showcase the natural beauty, culture, and unique experiences that each region has to offer.</h3>
                 <h4>Meet Our Municipal Partners:</h4>
