@@ -15,6 +15,7 @@ body {
 }
 
 .container {
+    position: fixed;
     border: none;
     box-shadow: 0 0 10px whitesmoke;
     border-radius: 10px;
@@ -44,13 +45,13 @@ body {
     }
 }
 
-@media (1400px < width < 3840px) {
+@media (1400px <= width <= 3840px) {
     .container {
         transform: scale(1.1);
     }
 }
 
-@media (width > 3840px) {
+@media (width >= 3840px) {
     .container {
         transform: scale(1.2);
     }
