@@ -91,12 +91,11 @@ body {
 
 .middle {
     flex-grow: 2;
-    flex-basis: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(114, 138, 122);
-    background-image: url(../axiom-pattern.png);
+    background-image: url(axiom-pattern.png);
 }
 .searchBarContainer {
     min-width: min(90%, 500px);
@@ -104,7 +103,7 @@ body {
     display: flex;
 }
 .searchBar {
-    min-width: 60%;
+    width: 5rem;
     margin-left: 15px;
     padding: .7rem;
     flex-grow: 10;
@@ -142,15 +141,17 @@ body {
     flex-basis: 20px;
     justify-content: end;
     display: flex;
-    padding: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem;
     border-spacing: 1px;
     background-color: rgb(114, 138, 122);
-    background-image: url(../axiom-pattern.png);
+    background-image: url(axiom-pattern.png);
 }
 .signUpButton {
     cursor: pointer;
     min-width: 6em;
-    margin-top: -0.2rem;
+    height: 1rem;
+    margin-top: 0.3rem;
     text-align: center;
     padding: 0.8rem;
     padding-bottom: 1.8rem;
@@ -168,10 +169,11 @@ body {
 .loginButton {  
     cursor: pointer;
     min-width: 6em;
+    height: 1rem;
     border: none;
     text-align: center;
     margin-left: 1rem;
-    margin-top: -0.2rem;
+    margin-top: 0.3rem;
     padding: 0.8rem;
     padding-bottom: 1.8rem;
     border-radius: 5px;
@@ -183,6 +185,19 @@ body {
 .loginButton:hover {  
     background-color: rgb(38, 66, 11);
     transition: ease-in-out 200ms;
+}
+@media (width <= 916px) {
+    .loginButton {
+        padding: 0.5rem;
+        padding-bottom: 1.5rem;
+        margin-top: 0;
+    }
+    .signUpButton {
+        margin-top: -0.78rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .profile {
@@ -206,15 +221,15 @@ body {
 /* menu bar  */
 
 .off_screen_menu {
-    background-color: rgba(114, 138, 122, 0.7);
-    background-image: url(../axiom-pattern.png);
+    background-color: rgba(114, 138, 122, 0.85);
+    background-image: url(axiom-pattern.png);
     border: 1px solid rgb(114, 138, 122);
     font-size: 1.1rem;
     position: fixed;
     margin-top: 0.6rem;
     width: 14%;
     min-width: 13rem;
-    min-height: 58.5rem;
+    min-height: calc(100vh - 5rem - 30px);
     color: white;
 }
 
@@ -244,7 +259,7 @@ li a {
     right: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 26rem;
+    min-width: 25rem;
     min-height: 25rem;
     border-radius: 10px;
     box-shadow: 0 0 50px rgb(69, 97, 78);
@@ -265,6 +280,23 @@ li a {
     outline: none;
     padding: .2rem;
 }
+.emailInfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+.emailNameSpace {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+.emailChangeSpace {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -0.5rem;
+}
+#profile_email {
+    word-break: break-all;
+}
 
 .profile_info_password {
     border-radius: 5px;
@@ -273,10 +305,29 @@ li a {
     padding: .2rem;
     margin-bottom: 3rem;
 }
+.passwordInfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+.passwordNameSpace {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+.passwordChangeSpace {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -0.5rem;
+}
+#profile_password {
+    margin: 0;
+}
 
 .changeEmail {
     height: 2rem;
+    margin-left: 0 !important;
     padding: 0.5rem;
+    padding-left: 0.6rem;
     border: none;
     border-radius: 5px;
     background-color: rgb(67, 117, 20);
@@ -286,7 +337,9 @@ li a {
 }
 .changePassword {
     height: 2rem;
+    margin-left: 0 !important;
     padding: 0.5rem;
+    padding-left: 0.6rem;
     border: none;
     border-radius: 5px;
     background-color: rgb(67, 117, 20);
@@ -330,7 +383,7 @@ li a {
     visibility: visible;
 }
 .profile_info_password {
-    margin-right: 3.5rem;
+    margin-bottom: 0;
     padding-left: 0.4rem;
     border: none;
     border-radius: 5px;
@@ -352,16 +405,18 @@ li a {
     visibility: visible;
 }
 
+.changeEmailContainer > *:not(#emailChangeErrorMsg) {
+    margin: 0;
+    flex-direction: row;
+}
 #changeEmailConfirm {
-    position: absolute;
-    padding: 0.4rem;
-    margin-left: 12rem;
-    margin-bottom: 6.5rem;
+    min-width: 4rem;
+    height: 1.93rem;
+    margin-top: -1px;
     border: none;
     border-radius: 5px;
     background-color: rgb(38, 66, 11);
     color: white;
-    transition: ease-in-out 200ms;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -376,16 +431,25 @@ li a {
     opacity: 1;
     visibility: visible;
 }
+#emailChangeErrorMsg {
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.changePasswordContainer > *:not(#passwordChangeErrorMsg) {
+    margin: 0;
+    text-align: center;
+    flex-direction: row;
+}
 #changePasswordConfirm {
-    position: absolute;
-    padding: 0.4rem;
-    margin-top: 10.9rem;
-    margin-left: 12rem;
+    min-width: 4rem;
+    height: 1.93rem;
+    margin-top: -1px;
     border: none;
     border-radius: 5px;
     background-color: rgb(38, 66, 11);
     color: white;
-    transition: ease-in-out 200ms;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -400,18 +464,9 @@ li a {
     opacity: 1;
     visibility: visible;
 }
-
-#emailChangeErrorMsg {
-    position: absolute;
-    margin-bottom: 4rem;
-    margin-right: 3.25rem;
-}
 #passwordChangeErrorMsg {
-    position: absolute;
-    text-align: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-top: 17rem;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .sign_out_button {
@@ -469,4 +524,16 @@ li a {
 
 #checkboxPassword:checked + label::before {
     content: url("../ShowPass.png");
+}
+
+@media (width <= 600px) {
+    .head {
+        font-size: 0.7rem;
+    }
+    .aboutBody {
+        font-size: 1rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
 }

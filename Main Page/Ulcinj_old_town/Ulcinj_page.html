@@ -44,25 +44,58 @@
                 </ul>
         </div>
         
+
+
         <div class="profile_info" id="user_info">
             <h4 class="profile_title">Profile information</h4>
-            <p>Email: <span id="profile_email">########</span>
-            <input type="checkbox" id="checkboxEmail" onclick="showEmail()">
-            <label for="checkboxEmail" class="fas" id="fas"></label>
-            <button class="changeEmail" style="margin-left: 1rem;" onclick="changeEmail()">Change?</button>
+
+            <p class="emailInfoContainer">
+                <div class="emailNameSpace">
+                    <p style="margin-top: 0px; margin-right: 5px;">Email:</p>
+                    <span id="profile_email">########</span>
+                    <input type="checkbox" id="checkboxEmail" onclick="showEmail()">
+                    <label for="checkboxEmail" class="fas" id="fas"></label>
+                </div>
+                <div class="emailChangeSpace">
+                    <button class="changeEmail" style="margin-left: 1rem;" onclick="changeEmail()">Change?</button>
+                </div>
             </p>
-            <input class="profile_info_mail" id="profile_info_mail" type="text" onkeyup="emailValidation()"><button id="changeEmailConfirm" onclick="confirmChangeEmail()">Submit</button>
-            <p id="emailChangeErrorMsg"></p>
-            <p>Password: <span id="profile_password">########</span>
-            <input type="checkbox" id="checkboxPassword" onclick="showPassword()">
-            <label for="checkboxPassword" class="fas" id="fas"></label>
-            <button class="changePassword" style="margin-left: 1rem;" onclick="changePassword()">Change?</button>
+
+            <div class="changeEmailContainer">
+                <input class="profile_info_mail" id="profile_info_mail" type="text" onkeyup="emailValidation()">
+                <button id="changeEmailConfirm" onclick="confirmChangeEmail()">Submit</button>
+                <p id="emailChangeErrorMsg"></p>
+            </div>
+
+        <!------------------------------------------------------------------------------------------------------------->
+
+            <p class="passwordInfoContainer">
+                <div class="passwordNameSpace">
+                    <p style="margin-top: 0px; margin-right: 5px;">Password:</p>
+                    <span id="profile_password">########</span>
+                    <input type="checkbox" id="checkboxPassword" onclick="showPassword()">
+                    <label for="checkboxPassword" class="fas" id="fas"></label>
+                </div>
+                <div class="passwordChangeSpace">
+                    <button class="changePassword" style="margin-left: 1rem;" onclick="changePassword()">Change?</button>
+                </div>
             </p>
-            <input class="profile_info_password" id="profile_info_password" type="text"><button id="changePasswordConfirm" onclick="confirmChangePassword()">Submit</button>
-            <p id="passwordChangeErrorMsg"></p>
+
+            <div class="changePasswordContainer">
+                <div>
+                    <input class="profile_info_password" id="profile_info_password" type="text">
+                    <button id="changePasswordConfirm" onclick="confirmChangePassword()">Submit</button>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p id="passwordChangeErrorMsg"></p>
+                </div>
+            </div>
+
             <button class="sign_out_button" id="sign_out_button" onclick="signOut()">Sign out</button>
         </div>
 
+
+        
         <div class="head">
             <h1>Welcome to the Old Town of Ulcinj</h1>
             <h2>Discover the Ancient History, Breathtaking Views, and Unique Culture of Ulcinj's Old Town!</h2>
