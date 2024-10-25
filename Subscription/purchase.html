@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <link rel="stylesheet" href="purchase.css">
+</head>
+<body>
+    <div class="container">
+        <p style="font-weight: bold; font-size: 1.2rem;">To purchase the premium packet please fill out the form.</p>
+        <form class="cardForm">
+            Cardholder Name:<input id="cardholder" type="text" placeholder="Name">
+            Card Number:<input id="cardNumber" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+            Expiration Date:<input id="expDate" type="text" placeholder="DD/MM/YYYY">
+            CVV:<input id="CVV" type="text" placeholder="XXX">
+        </form>
+        <button onclick="purchase()">Purchase</button>
+        <button class="cancelButton" onclick="cancel()">Cancel</button>
+    </div>
+    <script>
+        const cardholder = document.getElementById("cardholder").value;
+        const cardNumber = document.getElementById("cardNumber").value;
+        const expDate = document.getElementById("expDate").value;
+        const CVV = document.getElementById("CVV").value;
+
+        function cancel() {
+            localStorage.setItem("hourly", 0);
+            localStorage.setItem("daily", 0);
+            localStorage.setItem("weekly", 0);
+            localStorage.setItem("choosenPlan", false);
+            window.location.href = "pricing.html";
+        }
+        function purchase() {
+            if(localStorage.getItem("hourly") == 1) {
+                localStorage.setItem("choosenPlan", true);
+                window.location.href = "pricing.html";
+            }else if(localStorage.getItem("daily") == 1) {
+                localStorage.setItem("choosenPlan", true);
+                window.location.href = "pricing.html";
+            }else if(localStorage.getItem("weekly") == 1) {
+                localStorage.setItem("choosenPlan", true);
+                window.location.href = "pricing.html";
+            }
+        }
+    </script>
+</body>
+</html>

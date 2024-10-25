@@ -581,3 +581,19 @@ li a {
         width: 4rem;
     }
 }
+
+.premiumStartedButton {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.2rem;
+    color: white;
+    background-color: rgb(231, 185, 0);
+    box-shadow: 0 0 10px rgb(240, 192, 0);
+    transition: ease-in-out 200ms;
+}
+.premiumStartedButton:hover {
+    cursor: pointer;
+    background-color: rgb(202, 162, 0);
+    transition: ease-in-out 200ms;
+}

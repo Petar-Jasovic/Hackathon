@@ -23,7 +23,6 @@
             </div>
 
             <div class="right">
-                <!-- <button class="premium" onclick="location.href = '../Subscription/pricing.html'">Premium</button> -->
                 <button class="signUpButton" id="signUpButton" onclick="location.href='../Login and Sign up/signup.html'">Sign up</button>
                 <button class="loginButton" id="loginButton" onclick="location.href='../Login and Sign up/login.html'">Log in</button>
                 <button class="profile" id="profile" onclick="hideShowProfile()"><img class="profileImg" src="profile.png"></button>
@@ -41,26 +40,24 @@
                     <li><a href="Kotor_old_town/Kotor_page.html">Kotor</a></li>
                     <li><a href="Herceg_Novi_old_town/Herceg_Novi_page.html">Herceg Novi</a></li>
                 </ul>
-            <!-- <div class="noPremium"> -->
-                <h3 style="text-align: center;">List of landmarks</h3>
-                    <ul class="landmarks">
-                        <li><a href="Bar_landmarks/Bar_landmark_page.html">Bar</a></li>
-                        <li><a href="Budva_landmarks/Budva_landmark_page.html">Budva</a></li>
-                        <li><a href="Kotor_landmarks/Kotor_landmark_page.html">Kotor</a></li>
-                        <li><a href="Perast_landmarks/Perast_landmark_page.html">Perast</a></li>
-                        <li><a href="Risan_landmarks/Risan_landmark_page.html">Risan</a></li>
-                        <li><a href="Herceg_Novi_landmarks/Herceg_Novi_landmark_page.html">Herceg Novi</a></li>
-                        <li><a href="Tivat_landmarks/Tivat_landmark_page.html">Tivat</a></li>
-                        <li><a href="Ulcinj_landmarks/Ulcinj_landmark_page.html">Ulcinj</a></li>
-                    </ul>
+            <h3 style="text-align: center;">List of landmarks</h3>
+                <ul class="landmarks">
+                    <li><a href="Bar_landmarks/Bar_landmark_page.html">Bar</a></li>
+                    <li><a href="Budva_landmarks/Budva_landmark_page.html">Budva</a></li>
+                    <li><a href="Kotor_landmarks/Kotor_landmark_page.html">Kotor</a></li>
+                    <li><a href="Perast_landmarks/Perast_landmark_page.html">Perast</a></li>
+                    <li><a href="Risan_landmarks/Risan_landmark_page.html">Risan</a></li>
+                    <li><a href="Herceg_Novi_landmarks/Herceg_Novi_landmark_page.html">Herceg Novi</a></li>
+                    <li><a href="Tivat_landmarks/Tivat_landmark_page.html">Tivat</a></li>
+                    <li><a href="Ulcinj_landmarks/Ulcinj_landmark_page.html">Ulcinj</a></li>
+                </ul>
 
-                <h3 style="text-align: center;">Other</h3>
-                    <ul class="other">
-                        <li><a href="traditions_and_customs/traditions_and_customs_page.html">Traditions and Customs</a></li>
-                        <li><a href="resturants/resturants.html">Resturants</a></li>
-                        <li><a href="tours/tours_page.html">Tours</a></li>
-                    </ul>
-            <!-- </div> -->
+            <h3 style="text-align: center;">Other</h3>
+                <ul class="other">
+                    <li><a href="traditions_and_customs/traditions_and_customs_page.html">Traditions and Customs</a></li>
+                    <li><a href="resturants/resturants.html">Resturants</a></li>
+                    <li><a href="tours/tours_page.html">Tours</a></li>
+                </ul>
         </div>
         
         <div class="profile_info" id="user_info">
@@ -121,9 +118,22 @@
         </div>
         <div class="getStarted">
             <p style="font-size: 1.4rem; text-align: center;">Get started:</p>
+            <p style="text-align: center;">Unlock exclusive content by <button class="premiumStartedButton" onclick="window.location.href='/Subscription/pricing.html'">subscribing</button> today!</p>
             <ul class="towns" style="margin-left: -1rem; margin-right: -1rem;">
-                <li>Want to chat with our TourBot? 
+                <li style="max-width: 60rem;">Meet our new website chatbot, <b>TourBot</b>, your personal guide! Whether you're curious about historical events, looking for unique insights, or need quick answers, our chatbot is ready to help 24/7.
                     <a href="/ChatBot/chatBot.html" style="color: rgb(146, 146, 255);"><u>Click here!</u></a>
+                </li>
+                &nbsp;
+                <li style="max-width: 60rem;">Explore the best of local cuisine with our curated restaurant recommendations! From charming cafés to award-winning dining spots, we bring you the flavors and ambiance that make our town unforgettable.
+                    <a href="/Main Page/resturants/resturants.html" style="color: rgb(146, 146, 255);"><u>Click here!</u></a>
+                </li>
+                &nbsp;
+                <li style="max-width: 60rem;">Uncover the heart of our destination with exclusive local tours! From historic landmarks to breathtaking natural spots, our guided tours offer a deep dive into the culture and stories that make this place extraordinary.
+                    <a href="/Main Page/tours/tours_page.html" style="color: rgb(146, 146, 255);"><u>Click here!</u></a>
+                </li>
+                &nbsp;
+                <li style="max-width: 60rem;">Immerse yourself in the rich traditions and customs that define our local culture! From time-honored festivals to unique daily rituals, experience the authentic ways of life that have been cherished for generations.
+                    <a href="/Main Page/traditions_and_customs/traditions_and_customs_page.html" style="color: rgb(146, 146, 255);"><u>Click here!</u></a>
                 </li>
             </ul>
         </div>
@@ -142,19 +152,28 @@
                 <ul style="align-items:first baseline; margin-right: 2.8rem;" type="none">
                     <li>Email: [your-email@example.com]</li>
                     <li>Phone: +[Your Phone Number]</li>
+                    <hr width="50%">
+                    <li>Email: [your-email@example.com]</li>
+                    <li>Phone: +[Your Phone Number]</li>
                 </ul>
             </div>
 
             <div class="footerItem">
-                <h2>Our Supporting Municipalities</h2>
+                <h2>Our Supporting Municipalities and Partners</h2>
                 <h3>We are honored to be sponsored by municipalities that share our vision of promoting adventure, tourism, and outdoor activities. Their support helps us showcase the natural beauty, culture, and unique experiences that each region has to offer.</h3>
-                <h4>Meet Our Municipal Partners:</h4>
+                <h3>We are deeply grateful to our partners for their invaluable support. Your commitment allows us to bring the spirit of adventure and the beauty of tourism to life on our platform. With your collaboration, we’re able to highlight the incredible landscapes, vibrant cultures, and unique experiences that each destination has to offer. Thank you for being a vital part of our journey and for sharing our mission to inspire exploration and discovery.</h3>
+                <h4>Meet Our Municipal sponsors and partners:</h4>
                     <ul style="line-height: 0.7; margin-right: 2.2rem;" type="none">
                         <li>Municipality of Ulcinj</li>
                         <li>Municipality of Bar</li>
                         <li>Municipality of Budva</li>
                         <li>Municipality of Kotor</li>
                         <li>Municipality of Herceg Novi</li>
+                        <hr style="width: 50%;">
+                        <li>BOKA BAY TOURS</li>
+                        <li>MONTE ON LINE</li>
+                        <li>GOLDEN BAY TOURS</li>
+                        <li>AVE TOURS</li>
                     </ul>
             </div>
         </footer>

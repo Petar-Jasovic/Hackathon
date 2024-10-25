@@ -6,6 +6,14 @@
     <title>TourBot</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet CSS and JavaScript -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<!-- Leaflet Routing Machine CSS and JavaScript -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
 </head>
 <body id="body">
     <button class="backButton"><a href="../Main Page/main.html"><img src="back.png" style="width: 2rem; margin-right: 0.2rem; margin-top: 0.2rem;"></a></button>
@@ -19,7 +27,7 @@
                 explore the wonders of Montenegro together!</p>
 
             <div id="response"></div>
-            <input id="inputArea" placeholder="Let's talk!" />
+            <input id="inputArea" placeholder="Let's talk! 5/5" />
             <p id="errorPrompt"></p>
             <button id="submit" onclick="generateText()">Send</button>
         </div>
@@ -31,6 +39,10 @@
         <a href="../Login and Sign up/signUp.html" style="color: white; text-decoration: none;"><button class="signUp">Sign up</button></a>
         <a href="../Login and Sign up/login.html" style="color: white; text-decoration: none; margin-left: 1rem;"><button class="signUp">Login</button></a>
     </div>
+    <div id="noPremium">
+        <p class="premiumTitle">To continue using our TourBot consider subscribing!</p>
+        <a href="../Subscription/pricing.html"><button class="premium">Subscribe</button></a>
+    </div>
 
     <div id="freeTrialAlert">
         <div class="premiumSubscription">
@@ -38,7 +50,7 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
     <script src="chatBot.js"></script>
     <p style="text-align: center; margin-top: 0; margin-bottom: 0; color: white;">Icons provided by <a href="https://icons8.com/" style="color: rgb(162, 179, 255);">Icons8</a></p>
 </body>

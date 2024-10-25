@@ -1,0 +1,117 @@
+body {
+    background-image: url("../Login and Sign up/LoginBackgroundImage.jpg");
+    height: 98vh;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1s;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin: 15px auto;
+    padding: 5px;
+    padding-left: 8px;
+    width: 220px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: rgb(255, 255, 255) solid 3px;
+    transition: ease-in-out 200ms;
+}
+
+input:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+    border: rgba(0, 0, 0, 0.247) solid 3px;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 10px whitesmoke;
+    border-radius: 10px;
+    min-width: 20rem;
+    max-height: 90%;
+    padding: 2rem;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.774);
+    transition: ease-in-out 200ms;
+}
+
+.cardForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+button {
+    margin: auto;
+    margin-top: 2rem;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(67, 117, 20);
+    color: white;
+    transition: ease-in-out 200ms;
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(38, 66, 11);
+    transition: ease-in-out 200ms;
+}
+.cancelButton {
+    background-color: rgb(197, 60, 60);
+}
+.cancelButton:hover {
+    cursor: pointer;
+    background-color: rgb(148, 45, 45);
+    transition: ease-in-out 200ms;
+}
+
+@media (width <= 416px) {
+    .container {
+        transform: scale(0.8);
+    }
+}
+
+@media (416px <= width <= 800px) {
+    .container {
+        transform: scale(0.9);
+    }
+}
+
+@media (800px <= width <= 1400px) {
+    .container {
+        transform: scale(1);
+    }
+}
+
+@media (1400px <= width <= 3840px) {
+    .container {
+        transform: scale(1.1);
+    }
+}
+
+@media (width >= 3840px) {
+    .container {
+        transform: scale(1.2);
+    }
+}
