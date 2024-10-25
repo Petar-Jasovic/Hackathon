@@ -14,7 +14,7 @@ body {
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image: url(../arabesque.png);
-    background-color: rgb(99, 141, 131);
+    background-color: rgb(99, 141, 141);
     color: white;
 }
 
@@ -221,15 +221,17 @@ body {
 /* menu bar  */
 
 .off_screen_menu {
-    background-color: rgba(114, 138, 122, 0.85);
+    background-color: rgba(114, 138, 122, 0.8);
     background-image: url(../axiom-pattern.png);
     border: 1px solid rgb(114, 138, 122);
     font-size: 1.1rem;
     position: fixed;
-    margin-top: 0.6rem;
-    width: 14%;
-    min-width: 13rem;
+    top: 6.2rem;
+    width: 20%;
+    min-width: 15rem;
     min-height: calc(100vh - 5rem - 30px);
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
     color: white;
 }
 
@@ -266,6 +268,7 @@ li a {
     background-image: url(../arabesque.png);
     background-color: rgb(108, 145, 120);
     color: white;
+    z-index: 1;
 }
 
 .profile_title {
@@ -535,5 +538,46 @@ li a {
     }
     .footer {
         font-size: 0.8rem;
+    }
+}
+
+/* TourBot link icon */
+.chatBotLink {
+    display: flex;
+    justify-content: end;
+}
+.chatBotImg {
+    width: 5rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+.chatBotButton {
+    position: fixed;
+    cursor: pointer;
+    right: 2rem;
+    bottom: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    border: rgb(88, 88, 255);
+    box-shadow: 0 0 10px rgb(88, 88, 255);
+    background-color: rgb(88, 88, 255);
+    transition: ease-in-out 200ms;
+}
+.chatBotButton:hover {
+    border: rgb(65, 65, 187);
+    box-shadow: 0 0 10px rgb(65, 65, 187);
+    background-color: rgb(65, 65, 187);
+    transition: ease-in-out 200ms;
+}
+@media (width <= 800px) {
+    .chatBotButton {
+        right: 1rem;
+        bottom: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    .chatBotImg {
+        width: 4rem;
     }
 }

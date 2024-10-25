@@ -71,6 +71,7 @@ body {
 .navigationBar {
     height: 5rem;
     top: 0.5rem;
+    background-color: rgba(114, 138, 122, 0.8);
     margin: auto;
     display: flex;
     position: sticky;
@@ -80,7 +81,6 @@ body {
 
 .left {
     flex-grow: 1;
-    background-color: rgb(114, 138, 122);
     background-image: url(axiom-pattern.png);
 }
 .menu {
@@ -112,7 +112,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(114, 138, 122);
     background-image: url(axiom-pattern.png);
 }
 .searchBarContainer {
@@ -161,9 +160,23 @@ body {
     flex-wrap: wrap;
     padding: 1rem;
     border-spacing: 1px;
-    background-color: rgb(114, 138, 122);
     background-image: url(axiom-pattern.png);
 }
+/* .premium {
+    cursor: pointer;
+    min-width: 6em;
+    height: 1rem;
+    margin-top: 0.3rem;
+    text-align: center;
+    padding: 0.8rem;
+    padding-bottom: 1.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(67, 117, 20);
+    font-weight: bold;
+    color: white;
+    transition: ease-in-out 200ms;
+} */
 .signUpButton {
     cursor: pointer;
     min-width: 6em;
@@ -203,7 +216,7 @@ body {
     background-color: rgb(38, 66, 11);
     transition: ease-in-out 200ms;
 }
-@media (width <= 916px) {
+@media (width <= 900px) {
     .loginButton {
         padding: 0.5rem;
         padding-bottom: 1.5rem;
@@ -242,25 +255,27 @@ body {
     margin: auto;
     margin-top: 4rem;
     padding: 2rem;
-    width: 75%;
+    width: 70%;
     border-radius: 1rem;
     color: white;
-    background-color: rgba(245, 222, 179, 0.2);
+    background-color: rgba(134, 121, 97, 0.4);
     font-weight: bold;
 }
 
 /* menu bar  */
 
 .off_screen_menu {
-    background-color: rgba(114, 138, 122, 0.85);
+    background-color: rgba(114, 138, 122, 0.8);
     background-image: url(axiom-pattern.png);
     border: 1px solid rgb(114, 138, 122);
     font-size: 1.1rem;
     position: fixed;
-    margin-top: 0.6rem;
-    width: 14%;
-    min-width: 13rem;
+    top: 6.2rem;
+    width: 20%;
+    min-width: 15rem;
     min-height: calc(100vh - 5rem - 30px);
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
     color: white;
 }
 
@@ -297,6 +312,7 @@ li a {
     background-image: url(arabesque.png);
     background-color: rgb(108, 145, 120);
     color: white;
+    z-index: 1;
 }
 
 .profile_title {
@@ -497,6 +513,7 @@ li a {
 }
 #passwordChangeErrorMsg {
     margin: 0;
+    width: 350px;
     margin-bottom: 10px;
 }
 
@@ -553,4 +570,59 @@ li a {
 
 #checkboxPassword:checked + label::before {
     content: url("ShowPass.png");
+}
+
+
+
+/* TourBot link icon */
+.chatBotLink {
+    display: flex;
+    justify-content: end;
+}
+.chatBotImg {
+    width: 5rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+.chatBotButton {
+    position: fixed;
+    cursor: pointer;
+    right: 2rem;
+    bottom: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    border: rgb(88, 88, 255);
+    box-shadow: 0 0 10px rgb(88, 88, 255);
+    background-color: rgb(88, 88, 255);
+    transition: ease-in-out 200ms;
+}
+.chatBotButton:hover {
+    border: rgb(65, 65, 187);
+    box-shadow: 0 0 10px rgb(65, 65, 187);
+    background-color: rgb(65, 65, 187);
+    transition: ease-in-out 200ms;
+}
+@media (width <= 800px) {
+    .chatBotButton {
+        right: 1rem;
+        bottom: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    .chatBotImg {
+        width: 4rem;
+    }
+}
+
+.noPremium {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    padding: 1rem;
+    padding-left: 0;
+    border: none;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255, 0.2);
+    filter: blur(2px);
 }

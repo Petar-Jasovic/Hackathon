@@ -40,6 +40,12 @@ function hideShowProfile() {
         displayProfile = 0;
     }
 }
+function closeProfile() {
+    if(displayProfile === 1) {
+        showProfile.classList.remove('show');
+        displayProfile = 0;
+    }
+}
 
 // Initialize checkbox values and reset profile info
 document.getElementById("checkboxEmail").checked = false;

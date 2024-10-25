@@ -23,6 +23,7 @@
             </div>
 
             <div class="right">
+                <!-- <button class="premium" onclick="location.href = '../Subscription/pricing.html'">Premium</button> -->
                 <button class="signUpButton" id="signUpButton" onclick="location.href='../Login and Sign up/signup.html'">Sign up</button>
                 <button class="loginButton" id="loginButton" onclick="location.href='../Login and Sign up/login.html'">Log in</button>
                 <button class="profile" id="profile" onclick="hideShowProfile()"><img class="profileImg" src="profile.png"></button>
@@ -40,9 +41,30 @@
                     <li><a href="Kotor_old_town/Kotor_page.html">Kotor</a></li>
                     <li><a href="Herceg_Novi_old_town/Herceg_Novi_page.html">Herceg Novi</a></li>
                 </ul>
+            <!-- <div class="noPremium"> -->
+                <h3 style="text-align: center;">List of landmarks</h3>
+                    <ul class="landmarks">
+                        <li><a href="Bar_landmarks/Bar_landmark_page.html">Bar</a></li>
+                        <li><a href="Budva_landmarks/Budva_landmark_page.html">Budva</a></li>
+                        <li><a href="Kotor_landmarks/Kotor_landmark_page.html">Kotor</a></li>
+                        <li><a href="Perast_landmarks/Perast_landmark_page.html">Perast</a></li>
+                        <li><a href="Risan_landmarks/Risan_landmark_page.html">Risan</a></li>
+                        <li><a href="Herceg_Novi_landmarks/Herceg_Novi_landmark_page.html">Herceg Novi</a></li>
+                        <li><a href="Tivat_landmarks/Tivat_landmark_page.html">Tivat</a></li>
+                        <li><a href="Ulcinj_landmarks/Ulcinj_landmark_page.html">Ulcinj</a></li>
+                    </ul>
+
+                <h3 style="text-align: center;">Other</h3>
+                    <ul class="other">
+                        <li><a href="traditions_and_customs/traditions_and_customs_page.html">Traditions and Customs</a></li>
+                        <li><a href="resturants/resturants.html">Resturants</a></li>
+                        <li><a href="tours/tours_page.html">Tours</a></li>
+                    </ul>
+            <!-- </div> -->
         </div>
         
         <div class="profile_info" id="user_info">
+            <button class="profileCloseButton" onclick="closeProfile()" style="all: unset; margin-top: 1rem; cursor: pointer;"><img src="close.png" style="width: 2rem;"></button>
             <h4 class="profile_title">Profile information</h4>
 
             <p class="emailInfoContainer">
@@ -99,14 +121,18 @@
         </div>
         <div class="getStarted">
             <p style="font-size: 1.4rem; text-align: center;">Get started:</p>
-            <ul class="towns">
-                <li><a href="Ulcinj_old_town/Ulcinj_page.html">Ulcinj</a></li>
-                <li><a href="Bar_old_town/Bar_page.html">Bar</a></li>
-                <li><a href="Budva_old_town/Budva_page.html">Budva</a></li>
-                <li><a href="Kotor_old_town/Kotor_page.html">Kotor</a></li>
-                <li><a href="Herceg_Novi_old_town/Herceg_Novi_page.html">Herceg Novi</a></li>
+            <ul class="towns" style="margin-left: -1rem; margin-right: -1rem;">
+                <li>Want to chat with our TourBot? 
+                    <a href="/ChatBot/chatBot.html" style="color: rgb(146, 146, 255);"><u>Click here!</u></a>
+                </li>
             </ul>
         </div>
+
+        <a class="chatBotLink" href="/ChatBot/chatBot.html">
+            <button class="chatBotButton">
+                <img class="chatBotImg" src="chatBot.png">
+            </button>
+        </a>
         
         <footer class="footer">
             <div class="footerItem">
@@ -132,7 +158,7 @@
                     </ul>
             </div>
         </footer>
-
+        <p style="text-align: center; margin-top: 0; margin-bottom: 0; color: white;">Icons provided by <a href="https://icons8.com/" style="color: rgb(162, 179, 255);">Icons8</a></p>
     </main>
     <script src="mainPageJs.js"></script>
 </body>
