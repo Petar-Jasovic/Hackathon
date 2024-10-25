@@ -82,12 +82,13 @@ markerKotor.on('click', function() {
     routeControl = L.Routing.control({
         waypoints: [
             L.latLng(42.4247, 18.7712), // Kotor coordinates
-            L.latLng(armsSquareCoordinates) // Arms Square coordinates
+            L.latLng(armsSquareCoordinates), // Arms Square coordinates
         ],
         routeWhileDragging: false,
         createMarker: function() { return null; } // Hide default markers
     }).addTo(map);
 });
+
 
 
 

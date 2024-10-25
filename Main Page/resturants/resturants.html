@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resturants</title>
     <link rel="stylesheet" href="resturants_design.css">
+    <script src="../searchBarOther.js"></script>
 </head>
 <body>
     <main class="page">
@@ -16,8 +17,8 @@
 
             <div class="middle">
                 <div class="searchBarContainer">
-                    <input class="searchBar" type="text" placeholder="Search for...">
-                    <button class="searchGlass"><img class="searchGlassImg" src="../search.png" alt="search glass" height="18px"></button>
+                    <input class="searchBar" id="searchInput" type="text" placeholder="Search for...">
+                    <button class="searchGlass" id="searchButton"><img class="searchGlassImg" src="../search.png" alt="search glass" height="18px"></button>
                 </div>
             </div>
 
@@ -61,6 +62,7 @@
         </div>
         
         <div class="profile_info" id="user_info">
+            <button class="profileCloseButton" onclick="closeProfile()" style="all: unset; margin-top: 1rem; cursor: pointer;"><img src="/Main Page/close.png" style="width: 2rem;"></button>
             <h4 class="profile_title">Profile information</h4>
 
             <p class="emailInfoContainer">
@@ -248,6 +250,13 @@
     </main>
 
     <script>
+        function closeProfile() {
+            if(displayProfile === 1) {
+                showProfile.classList.remove('show');
+                displayProfile = 0;
+            }
+        }
+
         document.getElementById("checkboxEmail").checked = false;
         document.getElementById("checkboxPassword").checked = false;
 
